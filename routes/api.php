@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('empleados', [EmployeeController::class, 'index']);
 Route::get('empleados/{id}', [EmployeeController::class, 'findById']);
 Route::get('empleados/find-email/{email}', [EmployeeController::class, 'findByEmail']);
-Route::get('empleados/find-salary', [EmployeeController::class, 'findBySalary']);
+Route::post('empleados/find-salary', [EmployeeController::class, 'findBySalary']);

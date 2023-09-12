@@ -6,6 +6,7 @@ use App\Data\EmployeeData;
 use App\Http\Requests\findbySalaryRequest;
 use App\Services\EmployeeService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
 class EmployeeController extends Controller
@@ -33,7 +34,7 @@ class EmployeeController extends Controller
         return response()->json($employee);
     }
 
-    public function findBysalary(findbySalaryRequest $request)
+    public function findBysalary(Request $request)
     {
         $minSalary = $request->input('min_salary');
         $maxSalary = $request->input('max_salary');
